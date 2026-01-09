@@ -30,6 +30,9 @@ pnpm install
 # Build all packages (via Turborepo)
 pnpm build
 
+# Type check all packages
+pnpm typecheck
+
 # Lint code
 pnpm lint
 
