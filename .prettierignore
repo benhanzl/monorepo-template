@@ -1,5 +1,10 @@
+# Dependencies
 node_modules/
 pnpm-lock.yaml
+
+# Build outputs & caches
 .turbo/
-.zed/
 coverage/
+
+# Editor
+.zed/

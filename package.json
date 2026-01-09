@@ -15,7 +15,8 @@
     "lint:fix": "eslint --fix .",
     "prepare": "husky",
     "test": "turbo run test",
-    "test:coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
     "@commitlint/cli": "20.3.1",
