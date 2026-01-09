@@ -4,5 +4,8 @@
   "private": true,
   "type": "module",
   "main": "./index.ts",
-  "exports": "./index.ts"
+  "exports": "./index.ts",
+  "peerDependencies": {
+    "prettier": "^3.0.0"
+  }
 }
