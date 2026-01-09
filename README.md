@@ -1,6 +1,6 @@
 # monorepo-template
 
-A minimal pnpm monorepo template.
+A minimal pnpm (with Turbo) monorepo template.
 
 ## Requirements
 
@@ -25,6 +25,9 @@ monorepo-template/
 ```bash
 # Install dependencies
 pnpm install
+
+# Build all packages (via Turborepo)
+pnpm build
 
 # Lint code
 pnpm lint
