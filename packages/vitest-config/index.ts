@@ -11,3 +11,4 @@ const config: UserProjectConfigExport = defineProject({
 });
 
 export default config;
+export const baseConfig = config;
