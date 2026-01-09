@@ -5,13 +5,24 @@ import tseslint from "typescript-eslint";
 
 export default [
   {
-    ignores: ["**/node_modules/**", "**/dist/**", "**/build/**", "**/.turbo/**", "**/coverage/**"],
+    ignores: ["**/node_modules/**"],
   },
   {
     files: ["**/*.{js,mjs,cjs,ts,tsx,mts,cts}"],
   },
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
+  // TypeScript-specific configuration
+  {
+    files: ["**/*.{ts,tsx,mts,cts}"],
+    languageOptions: {
+      parserOptions: {
+        ecmaVersion: "latest",
+        sourceType: "module",
+      },
+    },
+  },
+  // Import plugin configuration
   {
     plugins: {
       import: importPlugin,
