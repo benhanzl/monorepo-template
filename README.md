@@ -41,3 +41,7 @@ pnpm format
 # Check formatting
 pnpm format:check
 ```
+
+## Commit Conventions
+
+This project uses [Conventional Commits](https://www.conventionalcommits.org/) with the [Angular convention](https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional).
