@@ -1,5 +1,10 @@
 {
   "name": "@repo/tsconfig",
   "version": "0.0.1",
-  "private": true
+  "private": true,
+  "exports": {
+    "./base.json": "./base.json",
+    "./app.json": "./app.json",
+    "./library.json": "./library.json"
+  }
 }
