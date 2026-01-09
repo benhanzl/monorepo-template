@@ -6,8 +6,5 @@ pnpm-lock.yaml
 .turbo/
 coverage/
 
-# CI/CD
-.github/
-
 # Editor
 .zed/
