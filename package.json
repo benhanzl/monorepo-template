@@ -9,10 +9,15 @@
   },
   "scripts": {
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
   },
   "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
     "@repo/prettier-config": "workspace:*",
-    "prettier": "3.7.4"
+    "eslint": "9.39.2",
+    "prettier": "3.7.4",
+    "typescript-eslint": "8.52.0"
   }
 }
