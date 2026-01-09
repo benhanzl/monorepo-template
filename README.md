@@ -13,6 +13,7 @@ A minimal pnpm monorepo template.
 monorepo-template/
 ├── apps/          # Application packages
 ├── packages/      # Shared library packages
+│   └── tsconfig/  # TypeScript configurations
 ├── package.json   # Root workspace configuration
 └── pnpm-workspace.yaml
 ```
