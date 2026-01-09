@@ -13,18 +13,22 @@
     "format:check": "prettier --check .",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test": "turbo run test",
+    "test:coverage": "vitest run --coverage"
   },
   "devDependencies": {
     "@commitlint/cli": "20.3.1",
     "@commitlint/config-conventional": "20.3.1",
     "@repo/eslint-config": "workspace:*",
     "@repo/prettier-config": "workspace:*",
+    "@vitest/coverage-v8": "4.0.16",
     "eslint": "9.39.2",
     "husky": "9.1.7",
     "lint-staged": "16.2.7",
     "prettier": "3.7.4",
     "turbo": "2.7.3",
-    "typescript-eslint": "8.52.0"
+    "typescript-eslint": "8.52.0",
+    "vitest": "4.0.16"
   }
 }

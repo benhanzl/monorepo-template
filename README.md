@@ -15,7 +15,8 @@ monorepo-template/
 ├── packages/            # Shared library packages
 │   ├── eslint-config/   # ESLint configuration
 │   ├── prettier-config/ # Prettier configuration
-│   └── tsconfig/        # TypeScript configurations
+│   ├── tsconfig/        # TypeScript configurations
+│   └── vitest-config/   # Vitest configuration
 ├── package.json         # Root workspace configuration
 └── pnpm-workspace.yaml
 ```
@@ -40,6 +41,12 @@ pnpm format
 
 # Check formatting
 pnpm format:check
+
+# Run tests
+pnpm test
+
+# Run tests with coverage
+pnpm test:coverage
 ```
 
 ## Commit Conventions
