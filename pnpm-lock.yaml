@@ -21,7 +21,7 @@ importers:
         specifier: 3.7.4
         version: 3.7.4
       turbo:
-        specifier: latest
+        specifier: 2.7.3
         version: 2.7.3
       typescript-eslint:
         specifier: 8.52.0
