@@ -1,0 +1,73 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":semanticCommits",
+    ":semanticCommitTypeAll(chore)",
+    ":semanticCommitScope(deps)"
+  ],
+  "labels": ["dependencies"],
+  "schedule": ["before 6am on monday"],
+  "stabilityDays": 3,
+  "prConcurrentLimit": 5,
+  "platformAutomerge": true,
+  "lockfileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 6am on monday"]
+  },
+  "packageRules": [
+    {
+      "description": "Group all non-major dependencies",
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch",
+      "automerge": true
+    },
+    {
+      "description": "Automerge GitHub Actions updates",
+      "matchManagers": ["github-actions"],
+      "automerge": true,
+      "groupName": "GitHub Actions",
+      "semanticCommitScope": "ci"
+    },
+    {
+      "description": "Group TypeScript ecosystem major updates",
+      "matchPackagePatterns": ["^typescript", "^@typescript-eslint/"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "TypeScript ecosystem (major)",
+      "semanticCommitScope": "typescript"
+    },
+    {
+      "description": "Group ESLint ecosystem major updates",
+      "matchPackagePatterns": ["^eslint", "^@eslint/"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "ESLint ecosystem (major)",
+      "semanticCommitScope": "eslint"
+    },
+    {
+      "description": "Group Vitest ecosystem major updates",
+      "matchPackagePatterns": ["^vitest", "^@vitest/"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "Vitest ecosystem (major)",
+      "semanticCommitScope": "vitest"
+    },
+    {
+      "description": "Package manager updates (manual review required)",
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["packageManager"],
+      "semanticCommitScope": "package-manager",
+      "automerge": false,
+      "groupName": "package manager"
+    },
+    {
+      "description": "Workspace protocol packages (internal dependencies)",
+      "matchDepTypes": ["workspace"],
+      "enabled": true,
+      "semanticCommitScope": "workspace"
+    }
+  ],
+  "vulnerabilityAlerts": {
+    "labels": ["security"],
+    "automerge": false
+  }
+}
