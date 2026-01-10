@@ -7,13 +7,13 @@
     ":semanticCommitScope(deps)"
   ],
   "labels": ["dependencies"],
-  "schedule": ["before 6am on monday"],
+  "schedule": ["before 6am on monday in America/New_York"],
   "stabilityDays": 3,
-  "prConcurrentLimit": 5,
+  "prConcurrentLimit": 10,
   "platformAutomerge": true,
   "lockfileMaintenance": {
     "enabled": true,
-    "schedule": ["before 6am on monday"]
+    "schedule": ["before 6am on wednesday in America/New_York"]
   },
   "packageRules": [
     {
@@ -27,8 +27,7 @@
       "description": "Automerge GitHub Actions updates",
       "matchManagers": ["github-actions"],
       "automerge": true,
-      "groupName": "GitHub Actions",
-      "semanticCommitScope": "ci"
+      "groupName": "GitHub Actions"
     },
     {
       "description": "Group TypeScript ecosystem major updates",
@@ -62,12 +61,13 @@
     {
       "description": "Workspace protocol packages (internal dependencies)",
       "matchDepTypes": ["workspace"],
-      "enabled": true,
+      "enabled": false,
       "semanticCommitScope": "workspace"
     }
   ],
   "vulnerabilityAlerts": {
     "labels": ["security"],
-    "automerge": false
+    "automerge": false,
+    "schedule": ["at any time"]
   }
 }
