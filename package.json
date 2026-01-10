@@ -11,8 +11,8 @@
     "build": "turbo run build",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
     "prepare": "husky",
     "test": "turbo run test",
     "test:coverage": "vitest run --coverage",
@@ -29,6 +29,7 @@
     "lint-staged": "16.2.7",
     "prettier": "3.7.4",
     "turbo": "2.7.3",
+    "typescript": "5.7.3",
     "typescript-eslint": "8.52.0",
     "vitest": "4.0.16"
   }
