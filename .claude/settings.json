@@ -1,6 +1,23 @@
 {
   "permissions": {
-    "allow": [],
-    "deny": []
+    "disableBypassPermissionsMode": "disable",
+    "allow": [
+      "Bash(gh pr checks *)",
+      "Bash(gh pr diff *)",
+      "Bash(gh pr list *)",
+      "Bash(gh pr status *)",
+      "Bash(gh pr view *)",
+      "Bash(gh status *)",
+      "Bash(git *)",
+      "Bash(pnpm *)"
+    ],
+    "ask": [
+      "Bash(gh pr close *)",
+      "Bash(gh pr create *)",
+      "Bash(gh pr merge *)",
+      "Bash(gh pr reopen *)",
+      "Bash(git push --force *)"
+    ],
+    "deny": ["Bash(git reset --hard *)", "Bash(sudo *)", "Read(**/.env)", "Read(**/.env.*)"]
   }
 }
