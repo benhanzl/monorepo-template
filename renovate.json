@@ -11,6 +11,8 @@
   "stabilityDays": 3,
   "prConcurrentLimit": 10,
   "platformAutomerge": true,
+  "automergeStrategy": "squash",
+  "requiredStatusChecks": null,
   "lockfileMaintenance": {
     "enabled": true,
     "schedule": ["before 6am on wednesday in America/New_York"]
@@ -27,6 +29,7 @@
       "description": "Automerge GitHub Actions updates",
       "matchManagers": ["github-actions"],
       "automerge": true,
+      "stabilityDays": 1,
       "groupName": "GitHub Actions"
     },
     {
