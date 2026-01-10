@@ -11,9 +11,10 @@
 
 ## Testing instructions
 
-- Run `pnpm turbo run test --filter <project_name>` to run every check defined for that package.
+- Find the CI plan in the `.github/workflows` folder.
+- Run `pnpm test --filter <project_name>` to run tests for a specific package.
 - From the package root you can just call `pnpm test`. The commit should pass all tests before you merge.
-- To focus on one step, add the Vitest pattern: `pnpm vitest run -t "<test name>"`.
+- To run a specific test: `pnpm vitest run -t "<test name>"` from the package directory.
 - Fix any test or type errors until the whole suite is green.
 - After moving files or changing imports, run `pnpm lint --filter <project_name>` to be sure ESLint and TypeScript rules still pass.
 - Add or update tests for the code you change, even if nobody asked.
