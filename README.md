@@ -12,6 +12,7 @@ A minimal pnpm (with Turbo) monorepo template.
 ```
 monorepo-template/
 ├── apps/                # Application packages
+│   └── example/         # Example application
 ├── packages/            # Shared library packages
 │   ├── eslint-config/   # ESLint configuration
 │   ├── prettier-config/ # Prettier configuration
