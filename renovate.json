@@ -1,5 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "timezone": "America/New_York",
   "extends": [
     "config:recommended",
     ":semanticCommits",
@@ -7,15 +8,14 @@
     ":semanticCommitScope(deps)"
   ],
   "labels": ["dependencies"],
-  "schedule": ["before 6am on monday in America/New_York"],
-  "stabilityDays": 3,
+  "schedule": ["before 6am on monday"],
+  "minimumReleaseAge": "3 days",
   "prConcurrentLimit": 10,
   "platformAutomerge": true,
   "automergeStrategy": "squash",
-  "requiredStatusChecks": null,
-  "lockfileMaintenance": {
+  "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["before 6am on wednesday in America/New_York"]
+    "schedule": ["before 6am on wednesday"]
   },
   "packageRules": [
     {
@@ -29,29 +29,29 @@
       "description": "Automerge GitHub Actions updates",
       "matchManagers": ["github-actions"],
       "automerge": true,
-      "stabilityDays": 1,
+      "minimumReleaseAge": "1 day",
       "groupName": "GitHub Actions"
     },
     {
       "description": "Group TypeScript ecosystem major updates",
-      "matchPackagePatterns": ["^typescript", "^@typescript-eslint/"],
       "matchUpdateTypes": ["major"],
       "groupName": "TypeScript ecosystem (major)",
-      "semanticCommitScope": "typescript"
+      "semanticCommitScope": "typescript",
+      "matchPackageNames": ["/^typescript/", "/^@typescript-eslint//"]
     },
     {
       "description": "Group ESLint ecosystem major updates",
-      "matchPackagePatterns": ["^eslint", "^@eslint/"],
       "matchUpdateTypes": ["major"],
       "groupName": "ESLint ecosystem (major)",
-      "semanticCommitScope": "eslint"
+      "semanticCommitScope": "eslint",
+      "matchPackageNames": ["/^eslint/", "/^@eslint//"]
     },
     {
       "description": "Group Vitest ecosystem major updates",
-      "matchPackagePatterns": ["^vitest", "^@vitest/"],
       "matchUpdateTypes": ["major"],
       "groupName": "Vitest ecosystem (major)",
-      "semanticCommitScope": "vitest"
+      "semanticCommitScope": "vitest",
+      "matchPackageNames": ["/^vitest/", "/^@vitest//"]
     },
     {
       "description": "Package manager updates (manual review required)",
