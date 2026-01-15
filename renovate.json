@@ -37,21 +37,21 @@
       "matchUpdateTypes": ["major"],
       "groupName": "TypeScript ecosystem (major)",
       "semanticCommitScope": "typescript",
-      "matchPackageNames": ["/^typescript/", "/^@typescript-eslint//"]
+      "matchPackageNames": ["/^typescript/", "/^@typescript-eslint/"]
     },
     {
       "description": "Group ESLint ecosystem major updates",
       "matchUpdateTypes": ["major"],
       "groupName": "ESLint ecosystem (major)",
       "semanticCommitScope": "eslint",
-      "matchPackageNames": ["/^eslint/", "/^@eslint//"]
+      "matchPackageNames": ["/^eslint/", "/^@eslint/"]
     },
     {
       "description": "Group Vitest ecosystem major updates",
       "matchUpdateTypes": ["major"],
       "groupName": "Vitest ecosystem (major)",
       "semanticCommitScope": "vitest",
-      "matchPackageNames": ["/^vitest/", "/^@vitest//"]
+      "matchPackageNames": ["/^vitest/", "/^@vitest/"]
     },
     {
       "description": "Package manager updates (manual review required)",
