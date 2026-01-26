@@ -21,6 +21,6 @@
   "devDependencies": {
     "@repo/tsconfig": "workspace:*",
     "eslint": "*",
-    "vitest": "4.0.17"
+    "vitest": "4.0.18"
   }
 }
